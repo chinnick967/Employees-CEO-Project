@@ -8,12 +8,12 @@ require "lib/Employees.php";
 $paginationStart = getQueryString("paginationStart", 1);
 $filter = trim(getQueryString("filter", ""));
 
+$Employees = getEmployees($conn);
+setEmployeesDistanceFromCEO($Employees);
+
 if (!ctype_digit($paginationStart)) {
     $paginationStart = 1;
 }
-
-$Employees = getEmployees($conn);
-setEmployeesDistanceFromCEO($Employees);
 
 if ($filter != "" && ctype_alpha(preg_replace('/\s+/','',$filter))) {
     $Employees = filterResults($Employees, $filter);
