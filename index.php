@@ -8,6 +8,10 @@ require "lib/Employees.php";
 $paginationStart = getQueryString("paginationStart", 1);
 $filter = trim(getQueryString("filter", ""));
 
+if (!ctype_digit($paginationStart)) {
+    $paginationStart = 1;
+}
+
 $Employees = getEmployees($conn);
 setEmployeesDistanceFromCEO($Employees);
 
