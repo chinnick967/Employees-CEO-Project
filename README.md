@@ -6,7 +6,7 @@ Date: 2/6/17
 
 Job application challenge project written in PHP for an employer that is going to be amazed and hire me.
 
-# Getting Starting
+# Getting Started
 
 To get yourself setup you will need to clone this repository onto your local computer. This project requires the Employees database provided by the company 
 that gave me this project that has not been included in this repository.
